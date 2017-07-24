@@ -28,6 +28,20 @@
 
 ### Installation and Execution
 
+    First the default event in line 57
+    of myApp.py is '/dev/input/event3'.
+    This may vary depending on the Pi.
+    Please navigate to the folder
+    /dev/input/ without the controler
+    plugged in and run $ls to see what
+    events exist.  Plug in the controller
+    and run $ls again.  The new event will
+    be the event for the controller.
+
+    Replace '/dev/input/eventX' in line
+    57 with whatever number should be at
+    the end of event.  
+
     Copy myApp.py to desired folder and ensure it has
     propper permissions
 
@@ -107,4 +121,4 @@
     You can read serial input on the Arduino with the
     Serial.read() function which returns a Byte.  This
     should be placed in a conditional statement that
-    checks "if(Serial.available() > 0) {...}". 
+    checks "if(Serial.available() > 0) {...}".
